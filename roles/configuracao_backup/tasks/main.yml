@@ -2,7 +2,7 @@
 - name: Configurando o Keepalived => Backup
   template:
     src: keepalived_conf.j2
-    dest: /etc/keepalived.conf
+    dest: /etc/keepalived/keepalived.conf
     owner: root
     group: root
     mode: 0644
