@@ -1,0 +1,6 @@
+---
+
+# Servidores web com apache
+webservers_node:
+  - {ip_port: '192.168.88.37:80', weight: '5'}
+  - {ip_port: '192.168.88.38:80', weight: '5'}
