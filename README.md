@@ -12,12 +12,14 @@ Provisionar toda instalação e configuração do Cluster Load Balance utilizand
  - CentOs 7
  - 512mb de memória
  - Acesso ssh com chave para o usuário **ansible**
+ - Configuração de Sudo sem senha para o usuario **ansible**
 
 **@lb_backup**
 
  - CentOs 7
  - 512mb de memória
  - Acesso ssh com chave para o usuário **ansible**
+ - Configuração de Sudo sem senha para o usuario **ansible**
 
 ## Configurações do Playbook
 
