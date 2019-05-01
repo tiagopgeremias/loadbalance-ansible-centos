@@ -1,0 +1,8 @@
+---
+- name: Configurando o Keepalived => Master
+  template:
+    src: keepalived_conf.j2
+    dest: /etc/keepalived.conf
+    owner: root
+    group: root
+    mode: 0644

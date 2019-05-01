@@ -1,0 +1,28 @@
+---
+- name: Cluster Load Balancer
+  hosts: lb_servers
+  become: yes
+  become_method: sudo
+  roles:
+    - instalacao_basica
+
+- name: Configuracao Load Balancer => Master
+  hosts: lb_master
+  become: yes
+  become_method: sudo
+  roles:
+    - configuracao_master
+
+- name: Configuracao Load Balancer => Backup
+  hosts: lb_backup
+  become: yes
+  become_method: sudo
+  roles:
+    - configuracao_backup
+
+- name: Inicializacao do Load Balancer
+  hosts: lb_servers
+  become: yes
+  become_method: sudo
+  roles:
+    - inicializar_servers

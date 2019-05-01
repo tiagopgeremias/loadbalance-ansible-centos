@@ -1,0 +1,26 @@
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+  upstream lbproject {
+    {% for server in webservers_node %}
+    server {{server.ip_port}} weight={{server.weight}};
+    {% endfor %}
+  }
+
+  server {
+    listen 80;
+    server_name www.tgeremias.local;
+    location / {
+      proxy_pass http://lbproject/;
+    }
+  }
+}

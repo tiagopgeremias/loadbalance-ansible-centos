@@ -1,0 +1,7 @@
+---
+ansible_user: ansible
+keepalived_auth_pass: 999
+keepalived_virtual_ip: 192.168.100.100/24
+webservers_node:
+  - {ip_port: '192.168.88.37:80', weight: '5'}
+  - {ip_port: '192.168.88.38:80', weight: '5'}

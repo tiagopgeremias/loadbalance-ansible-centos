@@ -1,0 +1,9 @@
+[lb_servers:children]
+lb_master
+lb_backup
+
+[lb_master]
+192.168.100.40
+
+[lb_backup]
+192.168.100.50

@@ -1,0 +1,20 @@
+---
+- name: Habilitando o Keepalived
+  service:
+    name: keepalived
+    enabled: yes
+
+- name: Habilitando o Nginx
+  service:
+    name: nginx
+    enabled: yes
+
+- name: Iniciando o Keepalived
+  service:
+    name: keepalived
+    state: started
+
+- name: Iniciando o Nginx
+  service:
+    name: nginx
+    state: started
